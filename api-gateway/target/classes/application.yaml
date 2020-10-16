@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: claim-service
+          uri: lb://CLAIM-SERVICE
+          predicates:
+            - Path=/api/claims/**
+        - id: premium-service
+          uri: lb://PREMIUM-SERVICE
+          predicates:
+            - Path=/api/user/**                
+
+server:
+  port: 8989
+  
+
+

@@ -1,0 +1,28 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+server:
+  port: 9096
+
+spring:
+  application:
+    name: PREMIUM-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/claimsmc
+    username: root
+    password: pass@word1
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    properties:
+     hibernate:
+       dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+ 
+
+      
